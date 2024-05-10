@@ -25,14 +25,9 @@ int main()
 
     if (longitud <= MAX && longitud > 0)
     {
-
-        cout << endl
-             << "Calculando resultados..." << endl;
-        for (int i = 0; i < longitud; i++)
-        {
-            array3[i] = (array1[i] + array2[i]);
-            cout << "Posicion [ " << i + 1 << " ] = " << array3[i] << endl;
-        }
+        datosVectores();
+        salidaVectores();
+        vectorSuma();
     }
     else if (longitud <= 0)
     {
@@ -74,28 +69,53 @@ void datosVectores()
         i++;
     }
 }
+
 void salidaVectores()
 {
-    //Salida Vector 1
+    // Salida Vector 1
     i = 0;
-    cout << "Arreglo 1 [ ";
+    cout << endl << endl<< "Has ingresado estos datos..." << endl;
+    cout << "Arreglo 1 [\t";
     while (i < longitud)
     {
-        cout << array1[i]<< "/t";
+        cout << array1[i] << "\t";
         i++;
     }
-    cout << " ] ";
+    cout << "]";
 
-    //Salida Vector 2
+    // Salida Vector 2
     i = 0;
-    cout << "Arreglo 2 [ ";
+    cout <<endl <<  "Arreglo 2 [\t";
     while (i < longitud)
     {
-        cout << array2[i]<< "/t";
+        cout << array2[i] << "\t";
         i++;
     }
-    cout << " ] ";
+    cout << "]";
 }
+
 void vectorSuma()
 {
+    cout << endl << endl << "Sumando...";
+    cout << endl
+         << "Calculando resultados..." << endl <<endl;
+    
+    //Sumando Vectores
+    i = 0;
+    while (i < longitud)
+    {
+        array3[i] = (array1[i] + array2[i]);
+        cout << "Posicion [ " << i + 1 << " ] = " << array3[i] << endl;
+        i++;
+    }
+
+    //Salida Vector
+    i = 0;
+    cout <<endl << endl <<  "Arreglo 3 [\t";
+    while (i < longitud)
+    {
+        cout << array3[i] << "\t";
+        i++;
+    }
+    cout << "]" << endl << endl;
 }
