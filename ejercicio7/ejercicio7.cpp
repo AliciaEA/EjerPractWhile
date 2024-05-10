@@ -3,8 +3,10 @@ de igual longitud y luego calcule la suma de ambos vectores. El
 resultado debe mostrarse en un tercer vector*/
 
 #include <iostream>
-using namespace std;
 #define MAX 10
+
+using namespace std;
+
 
 // Variables Globales
 int i = 0, longitud = 0;
