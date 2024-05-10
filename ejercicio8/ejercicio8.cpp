@@ -117,7 +117,7 @@ int productoVectores()
     i = 0;
     while (i < longitud)
     {
-        producto += (array1[i] + array2[i]);
+        producto += (array1[i] * array2[i]);
         i++;
     }
     return producto;
